@@ -70,11 +70,11 @@ h2 {
     padding: 0 1rem;
 }
 
-.comments {
+.comment {
     display: flex;
     gap: .2rem;
     font-size: 1.2rem;
-    margin: 1rem;
+    margin: .5rem 1rem;
 }
 
 .icons a:hover {
