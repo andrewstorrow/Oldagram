@@ -14,7 +14,9 @@ const posts = [
                 comment: "you sure did"
             }
         ],
-        likes: "21,492"
+        likes: "21,492",
+        isLiked: true,
+        uuid: "d3aefa2f-566c-49dd-9f1d-215cfb569604",
     },
     {
         name: "Gustave Courbet",
@@ -28,7 +30,9 @@ const posts = [
             }
         ],
         comment: "i'm feelin a bit stressed tbh",
-        likes: "12,502"
+        likes: "12,502",
+        isLiked: false,
+        uuid: "a5ee380a-9acb-418e-8dfe-d3ad96024d30",
     },
     {
         name: "Joseph Ducreux",
@@ -41,7 +45,9 @@ const posts = [
                 comment: "gm friends! which coin are YOU stacking up today?? post below and WAGMI!"
             }
         ],
-        likes: "15,137"
+        likes: "15,137",
+        isLiked: false,
+        uuid: "694a7ceb-3628-4832-8513-211d784d101e",
     }
 ];
 
