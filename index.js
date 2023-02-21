@@ -4,7 +4,6 @@ import { posts } from './data.js';
 // import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 // console.log(uuidv4());
 
-
 const UNLIKED_ICON = './images/icon-heart.png';
 const LIKED_ICON = './images/icon-heart-red.png';
 
@@ -12,6 +11,13 @@ document.addEventListener('click', (e) => {
     //Listen for like icon clicks
     if (e.target.dataset.likeIcon) {
         handleLikeIconClick(e.target);
+    }
+});
+
+document.addEventListener('dblclick', (e) => {
+    //Listen for post image double clicks
+    if (e.target.dataset.likeImage) {
+        handleLikeImageClick(e.target);
     }
 });
 
@@ -24,13 +30,6 @@ function handleLikeIconClick(likeIcon) {
         likeIcon.src = targetPost.isLiked ? LIKED_ICON : UNLIKED_ICON;
     }
 }
-
-document.addEventListener('dblclick', (e) => {
-    //Listen for post image double clicks
-    if (e.target.dataset.likeImage) {
-        handleLikeImageClick(e.target);
-    }
-});
 
 function handleLikeImageClick(likeImage) {
     //Get the post with the matching uuid from the data
@@ -78,7 +77,7 @@ function getFeedHtml() {
         <img src="./images/icon-dm.png" alt="direct message icon">
     </div>
     <h2 class="likes">${post.likes} likes</h2>
-    <div class="comments">
+    <div>
         ${commentsHtml}
     </div>
 </section>
